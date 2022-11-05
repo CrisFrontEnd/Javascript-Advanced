@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --tenne-tawny: #2f8d56;
+    --tenne-tawny-dark: #0f4d19;
+  }
+  
+  body {
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .btn {
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    outline: 0;
+    height: 100%;
+    font-size: 1.5rem;
+  }
+  
+  .title {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .container {
+    min-height: 100vh;
+  }
+  
+  .category-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .category-search {
+    margin: 2rem 0;
+  }
+  
+  .category-search cite {
+    font-size: 1rem;
+  }
+  
+  .category-search-box {
+    margin: 1.2rem 0;
+  }
+  
+  .search-control {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #search-input {
+    padding: 0.9rem 1rem;
+    font-size: 1.3rem;
+    font-family: 'Poppins',sans-serif;
+    outline: 0;
+    border: 1px solid var(--tenne-tawny);
+    color: var(--tenne-tawny);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  
+  .search-control ::placeholder {
+    color: var(--tenne-tawny);
+    font-size: 1.2rem;
+  }
+  
+  .search-btn {
+    width: 90px;
+    height: 63px;
+    font-size: 1.8rem;
+    background: var(--tenne-tawny);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    font-size: 0.9rem;
+  }
+  
+  .search-btn:hover {
+    background: var(--tenne-tawny-dark);
+    font-size: 1.4rem;
+  }
+  icon{
+    position: relative;
+    top:0.5rem;
+  }
+  .category-result {
+    margin-top: 4rem;
+  }
+  #book {
+    margin: 2.4rem 0;
+  }
+  .book-item {
+    
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+  }
+  
+  .book-img img {
+    width: 100%;
+    display: block;
+  }
+  
+  .book-name {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .book-name h3 {
+    font-size: 1.4rem;
+  }
+  
+  .description-btn {
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: var(--tenne-tawny);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+  }
+  
+  .description-btn:hover {
+    background: var(--tenne-tawny-dark);
+  }
+  
+  .book-details {
+    font-family: 'Poppins',sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #fff;
+    background: var(--tenne-tawny);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 100%;
+    height: 30%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+  }
+  
+  .book-details::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .book-details::-webkit-scrollbar-thumb {
+    background: #f0f0f0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+  }
+  
+  /* js related */
+  .showDescription {
+    display: block;
+  }
+  .book-details-content{
+    margin-top: 2rem;
+    padding: 0.3rem;
+  }
+  
+  .book-details-content p:not(.book-category) {
+    margin: 4rem;
+  }
+  
+  .book-details-content p {
+    margin-top: 30rem;
+    padding: 1rem 0;
+  }
+  
+  .description-close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1.3rem;
+    font-size: 1.3;
+    background: #fff;
+    border: none;
+    width: 26px;
+    height: 33px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
+  }
+  
+  .book-title {
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+  }
+  
+  .book-category {
+    background: #fff;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+  }
+  
+  .book-instruct {
+    padding: 1rem 0;
+  }
+  
+  .notFound {
+    grid-template-columns: 1fr !important;
+    color: var(--tenne-tawny);
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+  }
+  
+  /* media queries */
+  @media screen and (min-width: 600px) {
+    .category-search-box {
+      width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .spinner {
+      margin-left: 35%;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    #book {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .book-item {
+      margin: 0;
+    }
+    .book-details {
+      width: 700px;
+    }
+    .spinner {
+      margin-top: 10px;
+      margin-left: 42%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    #book {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Here start all the footer position and the setting about a fixed footer*/
+.FooterContainer {
+  margin-top: 5%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: fit-content;
+}
+p.footer-text{
+  color: black;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: 'Montserrat',sans-serif;
+}
+.img-logo{
+  width: 10%;
+  vertical-align: bottom;
+  margin-top: 2%;
+}
